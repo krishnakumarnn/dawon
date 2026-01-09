@@ -43,11 +43,12 @@ export async function GET(req: MedusaRequest, res: MedusaResponse) {
     },
   });
 
+  const meta = metadata ?? { count: products.length, skip: 0, take: limit };
   res.status(200).json({
     products,
-    count: metadata.count,
-    offset: metadata.skip,
-    limit: metadata.take,
+    count: meta.count ?? products.length,
+    offset: meta.skip ?? 0,
+    limit: meta.take ?? limit,
   });
 }
 
