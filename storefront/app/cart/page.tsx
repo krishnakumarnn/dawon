@@ -48,8 +48,14 @@ export default function CartPage() {
         });
         if (productsResponse.ok) {
           const productsData = await productsResponse.json();
-          const products = productsData.products || [];
-          const byId = new Map(products.map((product: any) => [product.id, product]));
+          const products = (productsData.products || []) as Array<{
+            id: string;
+            title?: string;
+            thumbnail?: string | null;
+            images?: Array<{ url?: string | null }>;
+            variants?: Array<{ prices?: Array<{ currency_code?: string; amount?: number }> }>;
+          }>;
+          const byId = new Map<string, typeof products[number]>(products.map((product) => [product.id, product]));
           const updated = cart.map((item) => {
             const product = byId.get(item.id);
             if (!product) return item;
