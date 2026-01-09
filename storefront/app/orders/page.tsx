@@ -44,7 +44,7 @@ export default function OrdersPage() {
         } catch (error) {
           return {};
         }
-      })() : '';
+      })() : {};
       const email = (emailFromStorage || parsedProfile.email || '').trim();
       const name = (localStorage.getItem('user_name') || parsedProfile.name || '').trim();
       const customerKey = token.trim();
