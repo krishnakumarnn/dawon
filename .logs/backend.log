@@ -732,13 +732,13 @@ Error: listen EADDRINUSE: address already in use :::9001
 [32minfo[39m:    No job to load from /Users/User/daw-store/backend/node_modules/@medusajs/draft-order/.medusa/server/src/jobs. skipped.
 ✔ Server is ready on port: 9001 – 25137ms
 [32minfo[39m:    Admin URL → http://localhost:9001/app
-t:3000/ (304) - 6.915 ms
-[32mhttp[39m:    OPTIONS /store/admin-products ← http://localhost:3000/ (204) - 0.216 ms
-[32mhttp[39m:    GET /store/admin-settings ← http://localhost:3000/ (304) - 6.191 ms
-[32mhttp[39m:    GET /store/admin-products ← http://localhost:3000/ (304) - 18.264 ms
-[32mhttp[39m:    GET /store/admin-products ← http://localhost:3000/ (304) - 18.380 ms
-[32mhttp[39m:    OPTIONS /store/admin-products?limit=200 ← http://localhost:3001/ (204) - 0.523 ms
-[32mhttp[39m:    OPTIONS /store/product-categories?limit=200 ← http://localhost:3001/ (204) - 0.528 ms
+[32mhttp[39m:    OPTIONS /store/admin-settings ← http://localhost:3000/ (204) - 11.890 ms
+[32mhttp[39m:    OPTIONS /store/admin-settings ← http://localhost:3000/ (204) - 0.521 ms
+[32mhttp[39m:    GET /store/admin-settings ← http://localhost:3000/ (304) - 33.447 ms
+[32mhttp[39m:    OPTIONS /store/admin-products ← http://localhost:3000/ (204) - 0.782 ms
+[32mhttp[39m:    GET /store/admin-settings ← http://localhost:3000/ (304) - 12.731 ms
+[32mhttp[39m:    GET /store/admin-products ← http://localhost:3000/ (304) - 60.161 ms
+00 ← http://localhost:3001/ (204) - 0.528 ms
 [32mhttp[39m:    OPTIONS /store/product-categories?limit=200 ← http://localhost:3001/ (204) - 1.066 ms
 [32mhttp[39m:    OPTIONS /store/admin-settings ← http://localhost:3001/ (204) - 0.464 ms
 [32mhttp[39m:    OPTIONS /store/admin-products?limit=200 ← http://localhost:3001/ (204) - 0.322 ms

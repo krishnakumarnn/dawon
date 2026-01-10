@@ -159,3 +159,4 @@
  GET /orders 200 in 16ms (compile: 2ms, render: 14ms)
  GET /products 200 in 18ms (compile: 3ms, render: 15ms)
  GET /dashboard 200 in 17ms (compile: 3ms, render: 14ms)
+ GET /dashboard 200 in 57ms (compile: 12ms, render: 45ms)
