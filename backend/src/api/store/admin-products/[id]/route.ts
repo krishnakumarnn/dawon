@@ -85,7 +85,7 @@ export async function POST(req: MedusaRequest, res: MedusaResponse) {
   const variant = existingProduct.variants?.[0];
   const variantId = variant?.id;
   if (Number.isFinite(rawPrice) && variantId) {
-    const existingPrice = variant?.prices?.find((price: any) => price.currency_code === currencyCode);
+    const existingPrice = (variant as any)?.prices?.find((price: any) => price.currency_code === currencyCode);
     const priceInput: { id?: string; amount: number; currency_code: string } = {
       amount: Math.round(Number(rawPrice) * 100),
       currency_code: currencyCode,

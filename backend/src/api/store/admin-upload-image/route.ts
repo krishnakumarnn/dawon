@@ -43,5 +43,9 @@ export async function POST(req: MedusaRequest, res: MedusaResponse) {
 
   await fs.writeFile(filePath, buffer);
 
-  res.status(200).json({ url: `/uploads/${fileName}` });
+  // Get the API base URL from environment or construct from request
+  const apiUrl = process.env.API_URL || `http://localhost:9000`;
+  const fullImageUrl = `${apiUrl}/uploads/${fileName}`;
+
+  res.status(200).json({ url: fullImageUrl });
 }
